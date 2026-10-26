@@ -219,7 +219,7 @@
 
     .translation { max-width: 530px; margin: auto; font-size: 14px; font-style: italic; }
 
-    /* ---------- Shared "Aa" ---------- */
+    /* ---------- Shared initial "A" ---------- */
     .aa { color: var(--gold); font-weight: 400; text-shadow: 0 0 18px #d8b66a60; animation: aaPulse 3s ease-in-out infinite; }
     .n2 .aa { animation-delay: 0s; } /* both pulse together: they're in sync */
     @keyframes aaPulse { 0%,100% { text-shadow: 0 0 6px #d8b66a30; } 50% { text-shadow: 0 0 28px #f3dca0aa; } }
@@ -255,7 +255,7 @@
     .mono-names { display: flex; justify-content: center; align-items: baseline; gap: 18px; flex-wrap: wrap; margin: 6px 0 10px; font-family: "Cormorant Garamond", serif; font-size: clamp(30px, 6vw, 54px); }
     .mono-names b { color: var(--gold); font-weight: 500; }
     .mono-names i { font-family: "Amiri", serif; color: var(--gold); font-size: .7em; font-style: normal; }
-    /* ---------- Aa upgrades ---------- */
+    /* ---------- Initial A monogram upgrades ---------- */
 .mono-stage { cursor: pointer; }
 .mono-beam {
   position: absolute; height: 2px; width: min(70vw, 460px);
@@ -272,7 +272,7 @@
   color: var(--gold-light); text-shadow: 0 0 12px var(--gold);
   transform: rotate(calc(var(--k) * 45deg)) translateY(calc(-1 * clamp(150px, 31vw, 260px)));
 }
-/* names unfold out of the shared "Aa" */
+/* Names unfold from the shared A + A monogram */
 .mono-names em { font-style: normal; }
 .mono-names .unf {
   display: inline-block; overflow: hidden; white-space: nowrap;
@@ -282,7 +282,7 @@
 }
 .mono-names.open .unf { max-width: 3em; opacity: 1; }
 
-/* hero: gold line under each Aa + flying sparkles */
+/* hero: gold line under each initial A + flying sparkles */
 .aa { position: relative; display: inline-block; }
 .aa::after {
   content: ""; position: absolute; left: 2%; right: 2%; bottom: .04em; height: 2px;
@@ -517,10 +517,12 @@
         <h1 class="shimmer hero-anim" style="--d:500">Two Souls,<br>One Journey</h1>
 
         <div class="names">
-          <span class="n1"><b class="aa">Aa</b>ftab</span>
+          <span class="n1"><b class="aa">A</b>ftab</span>
           <span class="ampersand">&amp;</span>
-          <span class="n2"><b class="aa">Aa</b>sifa</span>
+          <span class="n2"><b class="aa">A</b>sifa</span>
         </div>
+
+        <p class="hero-anim" style="--d:1500;font-size:11px;letter-spacing:2px;color:var(--muted);margin-top:-12px">Gul Aftab &amp; Asifa Shaikh</p>
 
         <div class="gold-line hero-line"></div>
 
@@ -534,10 +536,10 @@
       </div>
     </section>
 
-    <!-- 01b: Two A's, one beginning -->
+    <!-- 01b: Two names, one shared initial -->
     <section id="monogram">
       <div class="content">
-        <div class="eyebrow reveal">A little coincidence</div>
+        <div class="eyebrow reveal">One letter in common</div>
 
         <div class="mono-stage" id="monoStage">
   <span class="mono-ring"></span><span class="mono-ring r2"></span>
@@ -546,20 +548,20 @@
     <i style="--k:0">✦</i><i style="--k:1">✧</i><i style="--k:2">✦</i><i style="--k:3">✧</i>
     <i style="--k:4">✦</i><i style="--k:5">✧</i><i style="--k:6">✦</i><i style="--k:7">✧</i>
   </span>
-  <span class="mono a1">Aa</span><span class="mono a2">Aa</span>
+  <span class="mono a1">A</span><span class="mono a2">A</span>
   <span class="mono-burst"></span>
 </div>
 
-        <h2 data-split>Two names,<br>one beginning</h2>
+        <h2 data-split>Two names,<br>one shared initial</h2>
         <div class="gold-line"></div>
 
         <div class="mono-names reveal delay-1" id="monoNames">
-  <span><b>Aa</b><em class="unf">ftab</em></span><i>&amp;</i><span><b>Aa</b><em class="unf">sifa</em></span>
+  <span><b>A</b><em class="unf">ftab</em></span><i>&amp;</i><span><b>A</b><em class="unf">sifa</em></span>
 </div>
 
         <p class="intro-copy reveal delay-2">
-          Our names begin with the very same two letters &mdash;
-          two A's, two journeys, finding their way into one.
+          Our names begin with the same letter — A.
+          Two different names, two journeys, coming together as one.
         </p>
       </div>
     </section>
@@ -855,7 +857,7 @@ function celebrate() {
 }
 document.getElementById("monoStage").addEventListener("click", celebrate);
 
-// twinkles around the hero "Aa" letters
+// twinkles around the hero initial A letters
 setInterval(() => {
   if (reduced || !document.body.classList.contains("loaded") || scrollY > innerHeight) return;
   const list = document.querySelectorAll(".names .aa");
